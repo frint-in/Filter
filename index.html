@@ -1,0 +1,269 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="main-grid">
+        <div class="input-wrapper">
+            <p>Search by Keyword</p>
+            <div>
+                <i class="fa-solid fa-magnifying-glass" style="color: #68686a;"></i>
+                <input type="text" placeholder="Job title,keywords...">
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <p>Location</p>
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" placeholder="City or postcode">
+            </div>
+        </div>
+
+        <div class="range-slider-container">
+            <div>
+                <p>Radius : </p>
+                <p id="rangeValue">100</p>
+                <p>miles</p>
+            </div>
+            <input type="range" min="1" max="100" value="50" oninput="rangeValue.innerText = this.value" class="range-slider" id="myRange">
+        </div>
+
+
+        <div class="input-wrapper">
+            <p>Category</p>
+            <div>
+                <i class="fa-solid fa-briefcase"></i>
+                <select name="Category" id="">
+                    <option selected disabled value="Choose a category...">
+                        Choose a category...
+                    </option>
+                    <option value="AI/ML">
+                        AI/ML
+                    </option>
+                    <option value="App Development">
+                        App Development
+                    </option>
+                    <option value="Content Writing">
+                        Content Writing
+                    </option>
+                    <option value="Design">
+                        Design
+                    </option>
+                    <option value="Digital Marketing">
+                        Digital Marketing
+                    </option>
+                    <option value="Sales">
+                        Sales
+                    </option>
+                    <option value="Web Development">
+                        Web Development
+                    </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <p>Job type</p>
+            <select name="Job type" id="">
+                <option selected disabled value="Job Type">
+                    Job Type
+                </option>
+                <option value="Freelance">
+                    Freelance
+                </option>
+                <option value="Full Time">
+                    Full Time
+                </option>
+                <option value="Internship">
+                    Internship
+                </option>
+                <option value="Part Time">
+                    Part Time
+                </option>
+                <option value="Temporary">
+                    Temporary
+                </option>
+            </select>
+        </div>
+
+        <div class="input-wrapper gap-05">
+            <p>Date Posted</p>
+            <div class="radio-wrapper">
+                <input type="radio" name="date" value="Last Hour">
+                <label>Last Hour</label><br>
+            </div>
+
+            <div class="radio-wrapper">
+                <input type="radio" name="date" value="Last 24 hours">
+                <label>Last 24 hours</label><br>
+            </div>
+
+            <div class="radio-wrapper">
+                <input type="radio" name="date" value="Last 7 days">
+                <label>Last 7 days</label><br>
+            </div>
+
+            <div class="radio-wrapper">
+                <input type="radio" name="date" value="Last 14 days">
+                <label>Last 14 days</label><br>
+            </div>
+
+            <div class="radio-wrapper">
+                <input type="radio" name="date" value="Last 30 days">
+                <label>Last 30 days</label><br>
+            </div>
+
+            <div class="radio-wrapper">
+                <input type="radio" name="date" value="All">
+                <label>All</label><br>
+            </div>   
+        </div>
+
+        <div class="input-wrapper">
+            <p>Experience Level</p>
+            <div class="toggle-wrapper">
+                <label for="checkbox1" class="toggle">
+                    <input type="checkbox" id="checkbox1" class="checkbox">
+                    <div class="slider"></div>
+                </label>
+                <p>Fresh</p>
+            </div>
+
+            <div class="toggle-wrapper">
+                <label for="checkbox2" class="toggle">
+                    <input type="checkbox" id="checkbox2" class="checkbox">
+                    <div class="slider"></div>
+                </label>
+                <p>1 Year</p>
+            </div>
+
+            <div class="toggle-wrapper">
+                <label for="checkbox3" class="toggle">
+                    <input type="checkbox" id="checkbox3" class="checkbox">
+                    <div class="slider"></div>
+                </label>
+                <p>2 Year</p>
+            </div>
+
+            <div class="toggle-wrapper">
+                <label for="checkbox4" class="toggle">
+                    <input type="checkbox" id="checkbox4" class="checkbox">
+                    <div class="slider"></div>
+                </label>
+                <p>3 Year</p>
+            </div>
+
+            <div class="toggle-wrapper">
+                <label for="checkbox5" class="toggle">
+                    <input type="checkbox" id="checkbox5" class="checkbox">
+                    <div class="slider"></div>
+                </label>
+                <p>4 Year</p>
+            </div>
+
+            <div class="toggle-wrapper">
+                <label for="checkbox6" class="toggle">
+                    <input type="checkbox" id="checkbox6" class="checkbox">
+                    <div class="slider"></div>
+                </label>
+                <p>5 Year</p>
+            </div>
+        </div>  
+          
+        <div class="input-wrapper">
+            <p>Career Level</p>
+            <div class="toggle-wrapper">
+                <label for="checkbox7" class="toggle">
+                    <input type="checkbox" id="checkbox7" class="checkbox">
+                    <div class="slider"></div>
+                </label>
+                <p>On-site</p>
+            </div>
+            <div class="toggle-wrapper">
+                <label for="checkbox8" class="toggle">
+                    <input type="checkbox" id="checkbox8" class="checkbox">
+                    <div class="slider"></div>
+                </label>
+                <p>Remote</p>
+            </div>
+            <div class="toggle-wrapper">
+                <label for="checkbox9" class="toggle">
+                    <input type="checkbox" id="checkbox9" class="checkbox">
+                    <div class="slider"></div>
+                </label>
+                <p>Hybrid</p>
+            </div>
+        </div>
+
+        <div class="input-wrapper">
+            <p>Location</p>
+            <div>
+                <i class="fa-regular fa-user"></i>
+                <select name="Location" id="">
+                    <option selected disabled value="Location">
+                        Location
+                    </option>
+                    <option value="Dibrugarh">
+                        Dibrugarh
+                    </option>
+                    <option value="Guwahati">
+                        Guwahati
+                    </option>
+                    <option value="Nalbari">
+                        Nalbari
+                    </option>
+                    <option value="Sivasagar">
+                        Sivasagar
+                    </option>
+                    <option value="Tezpur">
+                        Tezpur
+                    </option>
+                </select>
+            </div>
+            <button class="location-btn">
+                Find Jobs
+            </button>
+        </div>
+        <div class="input-wrapper">
+            <p>Job Alert</p>
+
+            <p class="fs-08rem" id="font-wt-400">Title</p>
+
+            <input type="text" placeholder="">
+
+            <p class="fs-08rem" id="font-wt-400">Email Frequency</p>
+            <select name="Email" id="">
+                <option value="Daily">
+                    Daily
+                </option>
+                <option value="Weekly">
+                    Weekly
+                </option>
+                <option value="Fortnightly">
+                    Fortnightly
+                </option>
+                <option value="Monthly">
+                    Monthly
+                </option>
+                <option value="Biannually">
+                    Biannually
+                </option>
+                <option value="Annually">
+                    Annually
+                </option>
+            </select>
+            <button class="save-job">
+                Save Job Alert
+            </button>
+        </div>
+    </div>
+</body>
+</html>
